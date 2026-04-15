@@ -1,0 +1,1211 @@
+ :root {
+  --cor-primaria: white;
+  --cor-secundaria: #111;
+  --cor-contraste: #FFC107;
+  --cor-cinza: #aaa;
+  --cor-fundo: #f3f3f3;
+}
+ 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  background: url('Imagensconsulado/fachada.jpg') no-repeat center/cover;
+  position: relative;
+  color: var(--cor-primaria);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 75px;
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 99999;
+  background: transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(20, 20, 20, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.logo img {
+  height: 50px !important;
+  margin: 0 !important;
+}
+
+.menu {
+  margin: 0 !important;
+  font-size: 25px !important;
+  color: white !important;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu.escondido {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  padding: 90px 30px 40px;
+  transition: right 0.4s ease;
+  z-index: 100000; /* maior que a navbar */
+}
+
+.menu-lateral.ativo {
+  right: 0;
+}
+
+.fechar {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--cor-primaria);
+  transition: 0.4s;
+}
+
+.fechar:hover {
+  color: var(--cor-cinza);
+  transform: scale(1.1);
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral li {
+  margin: 20px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-lateral li:hover {
+  color: var(--cor-cinza);
+  transform: scale(1.05);
+}
+
+/* CONTEÚDO DO HERO */
+.content {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  z-index: 3;
+  max-width: 600px;
+}
+
+.tags {
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* BOTÃO */
+.video-btn {
+  position: absolute;
+  bottom: 80px;
+  right: 100px;
+  z-index: 5;
+}
+
+.video-link {
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--cor-primaria);
+  border: 1px solid var(--cor-primaria);
+  padding: 16px 28px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.video-link:hover {
+  background: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+
+/* SEÇÃO DESTINOS */
+.destinos {
+  width: 100%;
+  background: var(--cor-primaria);
+  padding: 80px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.destinos-texto {
+  width: 42%;
+  padding-top: 40px;
+}
+
+.destinos-texto h2 {
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--cor-secundaria);
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.destinos-texto h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  color:var(--cor-secundaria);
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+.destinos-texto p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--cor-cinza);
+  max-width: 430px;
+  margin-bottom: 35px;
+}
+
+.btn-destinos {
+  display: inline-block;
+  background: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  text-decoration: none;
+  padding: 18px 34px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  margin-left: 75px;
+  border-radius: 5px;
+}
+
+.btn-destinos:hover {
+  background: var(--cor-contraste);
+  color: var(--cor-secundaria);
+  transform: translateY(-2px);
+}
+
+.destinos-direita {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+}
+
+.destinos-cards {
+  width: 100%;
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.card-destino {
+  width: 350px;   /* largura maior */
+  height: 600px;  /* altura grande  */
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--cor-secundaria);
+  min-width: 330px;
+  background: var(--cor-secundaria);
+}
+
+.card-destino img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*object-position: center;*/
+  /*display: block;*/
+  transition: transform 0.5s ease;
+}
+
+.destaque img {
+  object-position: 70% 90%;
+}
+
+.card-destino:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-card {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.15));
+}
+
+.card-info {
+  position: absolute;
+  left: 24px;
+  bottom: 28px;
+  z-index: 2;
+  color: var(--cor-primaria);
+}
+
+.card-info span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-info h3 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.setas {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 18px;
+  padding-right: 8px;
+}
+
+.seta {
+  font-size: 40px;
+  color: var(--cor-cinza);
+  cursor: pointer;
+  transition: 0.3s;
+  line-height: 1;
+}
+
+.seta:hover {
+  color: var(--cor-secundaria);
+}
+
+.destinos-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.destinos-cards {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.imoveis-vitrine {
+  background: var(--cor-primaria);
+  padding: 20px 0 0px;
+}
+
+.vitrine-container {
+  position: relative;
+  width: 100%;
+}
+
+.vitrine-container::before,
+.vitrine-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 540px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.vitrine-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.35), transparent);
+}
+
+.vitrine-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.35), transparent);
+}
+
+.vitrine-cards {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.vitrine-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.imovel-card {
+  width: 480px !important;
+  min-width: 480px !important;
+  max-width: 480px !important;
+  flex: 0 0 480px !important;
+  background: #f3f3f3;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0;
+  opacity: 1;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+
+.imovel-card.ativo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.imovel-imagem {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.imovel-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 0.8s ease;
+}
+
+.imovel-card:hover .imovel-imagem img {
+  transform: scale(1.08);
+}
+
+.faixa-exclusivo {
+  position: absolute;
+  top: 28px;
+  left: -38px;
+  background: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 36px;
+  transform: rotate(-45deg);
+  letter-spacing: 0.5px;
+}
+
+.imovel-info {
+  padding: 28px 30px 34px;
+}
+
+.imovel-topo {
+  display: flex;
+  flex-direction: column; /* muda de linha para coluna */
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tipo-imovel {
+  font-size: 18px;
+  color: #1f3f7a;
+  font-weight: 400;
+  margin: 0;
+  text-transform: none;
+}
+
+.bairro-imovel {
+  font-size: 22px;
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.detalhes-imovel {
+  font-size: 18px;
+  color: var(--cor-secundaria);
+  line-height: 1.4;
+}
+
+.preco-imovel {
+  text-align: left;
+  color: var(--cor-contraste);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.descricao-imovel {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5e6f8f;
+  max-width: 95%;
+}
+
+.vitrine-seta {
+  position: absolute;
+  top: 270px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.85);
+  font-size: 54px;
+  cursor: pointer;
+  z-index: 4;
+  transition: 0.3s;
+  line-height: 1;
+}
+
+.vitrine-seta:hover {
+  color: var(--cor-contraste);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.vitrine-seta.esquerda {
+  left: 14px;
+}
+
+.vitrine-seta.direita {
+  right: 14px;
+}
+
+.vitrine-indicador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.linha {
+  width: 280px;
+  height: 3px;
+  background: rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.progresso {
+  width: 80px;
+  height: 100%;
+  background: var(--cor-primaria);
+  transition: transform 0.35s ease;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 80px 60px 30px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: var(--cor-primaria);
+}
+
+.footer-title-space {
+  margin-top: 50px;
+}
+
+.footer-logo img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 20px;
+}
+
+.footer-col a {
+  color: #bfc4cc;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.0;
+  transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #bfc4cc;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  line-height: 1.5;
+}
+
+.footer-social a svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom p {
+  color: #8f96a3;
+  font-size: 14px;
+  margin: 25px;
+}
+
+/* =========================
+   RESPONSIVIDADE GERAL
+========================= */
+
+/* Telas grandes menores */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0 40px;
+  }
+
+  .content {
+    left: 30px;
+    bottom: 60px;
+    max-width: 520px;
+  }
+
+  .content h1 {
+    font-size: 42px;
+  }
+
+  .video-btn {
+    right: 40px;
+    bottom: 60px;
+  }
+
+  .destinos {
+    padding: 70px 30px;
+    gap: 30px;
+  }
+
+  .destinos-texto {
+    width: 45%;
+  }
+
+  .destinos-direita {
+    width: 55%;
+  }
+
+  .destinos-texto h2 {
+    font-size: 38px;
+  }
+
+  .destinos-texto h3 {
+    font-size: 26px;
+    margin-left: 0;
+  }
+
+  .destinos-texto p {
+    font-size: 18px;
+  }
+
+  .btn-destinos {
+    margin-left: 0;
+  }
+
+  .card-destino {
+    width: 300px;
+    min-width: 300px;
+    height: 500px;
+  }
+
+  .card-info h3 {
+    font-size: 40px;
+  }
+
+  .imovel-card {
+    width: 420px !important;
+    min-width: 420px !important;
+    max-width: 420px !important;
+    flex: 0 0 420px !important;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    min-height: 85vh;
+    padding: 140px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .navbar {
+    height: 80px;
+    padding: 0 24px;
+  }
+
+  .logo img {
+    height: 42px !important;
+  }
+
+  .menu {
+    font-size: 22px !important;
+  }
+
+  .menu-lateral {
+    width: 300px;
+    right: -300px;
+    padding: 80px 24px 30px;
+  }
+
+  .content {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .content h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .content p {
+    font-size: 17px;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .video-btn {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    z-index: 3;
+  }
+
+  .video-link {
+    font-size: 18px;
+    padding: 14px 24px;
+  }
+
+  .destinos {
+    flex-direction: column;
+    padding: 60px 24px;
+  }
+
+  .destinos-texto,
+  .destinos-direita {
+    width: 100%;
+  }
+
+  .destinos-texto {
+    padding-top: 0;
+  }
+
+  .destinos-texto h2 {
+    font-size: 34px;
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .destinos-texto h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .destinos-texto p {
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .card-destino {
+    width: 280px;
+    min-width: 280px;
+    height: 430px;
+  }
+
+  .card-info {
+    left: 18px;
+    bottom: 20px;
+  }
+
+  .card-info span {
+    font-size: 14px;
+  }
+
+  .card-info h3 {
+    font-size: 34px;
+  }
+
+  .setas {
+    justify-content: center;
+    gap: 22px;
+    padding-right: 0;
+  }
+
+  .vitrine-container::before,
+  .vitrine-container::after {
+    display: none;
+  }
+
+  .vitrine-cards {
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  .imovel-card {
+    width: 360px !important;
+    min-width: 360px !important;
+    max-width: 360px !important;
+    flex: 0 0 360px !important;
+    border-right: none;
+  }
+
+  .imovel-imagem {
+    height: 240px;
+  }
+
+  .imovel-info {
+    padding: 22px 22px 28px;
+  }
+
+  .bairro-imovel {
+    font-size: 20px;
+  }
+
+  .detalhes-imovel,
+  .tipo-imovel {
+    font-size: 16px;
+  }
+
+  .preco-imovel {
+    font-size: 22px;
+    white-space: normal;
+  }
+
+  .descricao-imovel {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .vitrine-seta {
+    font-size: 42px;
+    top: 220px;
+  }
+
+  .footer {
+    padding: 60px 30px 25px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-logo img {
+    margin-bottom: 30px;
+  }
+
+  .footer-title-space {
+    margin-top: 30px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    padding: 120px 20px 40px;
+    background-position: center;
+  }
+
+  .navbar {
+    height: 74px;
+    padding: 0 18px;
+  }
+
+  .logo img {
+    height: 36px !important;
+  }
+
+  .menu {
+    font-size: 20px !important;
+  }
+
+  .menu-lateral {
+    width: 100%;
+    right: -100%;
+    height: 100vh;
+    padding: 80px 20px 30px;
+  }
+
+  .menu-lateral.ativo {
+    right: 0;
+  }
+
+  .fechar {
+    top: 22px;
+    right: 20px;
+    font-size: 28px;
+  }
+
+  .menu-lateral li {
+    font-size: 17px;
+    margin: 18px 0;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .tag {
+    margin-right: 0;
+    font-size: 13px;
+  }
+
+  .video-link {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  .destinos {
+    padding: 50px 20px;
+  }
+
+  .destinos-texto h2 {
+    font-size: 28px;
+  }
+
+  .destinos-texto h3 {
+    font-size: 20px;
+  }
+
+  .destinos-texto p {
+    font-size: 16px;
+  }
+
+  .btn-destinos {
+    width: 100%;
+    text-align: center;
+    padding: 16px 20px;
+  }
+
+  .destinos-cards {
+    gap: 14px;
+  }
+
+  .card-destino {
+    width: 78vw;
+    min-width: 78vw;
+    height: 360px;
+  }
+
+  .card-info h3 {
+    font-size: 28px;
+  }
+
+  .seta {
+    font-size: 34px;
+  }
+
+  .imoveis-vitrine {
+    padding-top: 10px;
+  }
+
+  .vitrine-cards {
+    padding: 0 16px;
+    gap: 14px;
+  }
+
+  .imovel-card {
+    width: 85vw !important;
+    min-width: 85vw !important;
+    max-width: 85vw !important;
+    flex: 0 0 85vw !important;
+    transform: scale(1);
+  }
+
+  .imovel-imagem {
+    height: 220px;
+  }
+
+  .faixa-exclusivo {
+    font-size: 11px;
+    padding: 10px 30px;
+    left: -34px;
+    top: 24px;
+  }
+
+  .imovel-info {
+    padding: 20px 18px 24px;
+  }
+
+  .tipo-imovel {
+    font-size: 14px;
+  }
+
+  .bairro-imovel {
+    font-size: 18px;
+  }
+
+  .detalhes-imovel {
+    font-size: 15px;
+  }
+
+  .preco-imovel {
+    font-size: 19px;
+    line-height: 1.3;
+  }
+
+  .descricao-imovel {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .vitrine-seta {
+    display: none;
+  }
+
+  .vitrine-indicador {
+    margin-top: 18px;
+  }
+
+  .linha {
+    width: 180px;
+  }
+
+  .progresso {
+    width: 60px;
+  }
+
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .footer {
+    padding: 50px 20px 20px;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-col h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+  }
+
+  .footer-col li {
+    margin-bottom: 14px;
+  }
+
+  .footer-col a,
+  .footer-social a {
+    font-size: 15px;
+  }
+
+  .footer-title-space {
+    margin-top: 20px;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
+    padding-top: 18px;
+  }
+
+  .footer-bottom p {
+    margin: 12px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Celulares menores */
+@media (max-width: 480px) {
+  .hero {
+    padding: 110px 16px 30px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .video-link {
+    font-size: 15px;
+    padding: 13px 16px;
+  }
+
+  .destinos {
+    padding: 40px 16px;
+  }
+
+  .destinos-texto h2 {
+    font-size: 24px;
+  }
+
+  .destinos-texto h3 {
+    font-size: 18px;
+  }
+
+  .destinos-texto p {
+    font-size: 15px;
+  }
+
+  .card-destino {
+    width: 84vw;
+    min-width: 84vw;
+    height: 320px;
+  }
+
+  .card-info h3 {
+    font-size: 24px;
+  }
+
+  .imovel-card {
+    width: 88vw !important;
+    min-width: 88vw !important;
+    max-width: 88vw !important;
+    flex: 0 0 88vw !important;
+  }
+
+  .imovel-imagem {
+    height: 200px;
+  }
+
+  .preco-imovel {
+    font-size: 17px;
+  }
+
+  .descricao-imovel {
+    font-size: 13px;
+  }
+
+  .linha {
+    width: 150px;
+  }
+}

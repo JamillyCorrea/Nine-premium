@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine Premium</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="FAVICON-NINE.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+ <div class="navbar">
+  <div class="logo">
+    <img src="/assets/logobranco.svg" alt="Nine">
+  </div>
+  <div class="menu" onclick="abrirMenu()">☰ Menu</div>
+</div>
+<section class="hero">
+<!-- MENU LATERAL -->
+<div id="menuLateral" class="menu-lateral">
+  <div class="fechar" onclick="fecharMenu()">✕</div>
+
+  <ul>
+    <li>Página inicial</li>
+    <li>Investimentos</li>
+    <li>Sobre a empresa</li>
+    <li>Trabalhe conosco</li>
+    <li>Sobre o mercado Imobiliáro</li>
+  </ul>
+</div>
+
+  <!-- TEXTO -->
+  <div class="content">
+    <div class="tags">
+      <span class="tag">São Paulo</span>
+      <span class="tag">Lançamento</span>
+    </div>
+
+    <h1>Today Chácara Santo Antônio</h1>
+    <p>Rentabilidade acima da média, localização que valoriza.</p>
+  </div>
+
+  <!-- BOTÃO VIDEO -->
+  <div class="video-btn">
+    <a href="https://wa.me/5551989153245" class="video-link">
+    <span>Saiba mais</span>
+    </a>
+  </div>
+</section>
+
+<section class="destinos">
+  <div class="destinos-texto">
+    <h2>Vários destinos, um único propósito:</h2>
+    <h3>Retorno Financeiro</h3>
+    <p>
+      Descubra o melhor investimento, nas regiões com maiores demandas do Brasil.
+    </p>
+    <a href="#" class="btn-destinos">DESCUBRA</a>
+  </div>
+
+  <div class="destinos-direita">
+    <div class="destinos-cards">
+      <div class="card-destino">
+        <img src="assets/paulista.jpg" alt="São Paulo">
+        <div class="overlay-card"></div>
+        <div class="card-info">
+          <span>Empreendimentos em</span>
+          <h3>São Paulo</h3>
+        </div>
+      </div>
+
+      <div class="card-destino">
+        <img src="assets/orlagauiba.jpg" alt="Porto Alegre">
+        <div class="overlay-card"></div>
+        <div class="card-info">
+          <span>Empreendimentos em</span>
+          <h3>Porto Alegre</h3>
+        </div>
+      </div>
+
+      <div class="card-destino destaque">
+        <img src="assets/Cristo_Redentor_-_Rio_de_Janeiro_-_20230321170956-960x580.jpg" alt="Rio de Janeiro">
+        <div class="overlay-card"></div>
+        <div class="card-info">
+          <span>Empreendimentos em</span>
+          <h3>Rio de Janeiro</h3>
+        </div>
+      </div>
+    </div>
+    <div class="setas">
+      <div class="seta esquerda" onclick="scrollCards(-1)">&#8249;</div>
+      <div class="seta direita" onclick="scrollCards(1)">&#8250;</div>
+    </div>
+  </div>
+</section>
+
+<section class="imoveis-vitrine">
+    <div class="vitrine-container">
+
+      <button class="vitrine-seta esquerda" onclick="scrollVitrine(-1)">&#10094;</button>
+
+      <div class="vitrine-cards" id="vitrineCards">
+        <div class="imovel-card">
+          <div class="imovel-imagem">
+            <img src="Imagensnurban/lobby2.jpg" alt="Nurban Palmeiras">
+            <div class="faixa-exclusivo">OPORTUNIDADE</div>
+          </div>
+
+          <div class="imovel-info">
+            <div class="imovel-topo">
+              <div>
+                <p class="tipo-imovel">LOFT</p>
+                <h3 class="bairro-imovel">Próximo ao Allianz Parque</h3>
+                <p class="detalhes-imovel">17 a 20m²</p>
+              </div>
+
+              <div class="preco-imovel">
+                <span>Rentabilidade a partir de <br>R$ 5.750,00 a.m<br></span>
+              </div>
+            </div>
+
+            <p class="descricao-imovel">
+              Invista em uma das melhores localizações de São Paulo...
+            </p>
+          </div>
+        </div>
+
+        <div class="imovel-card">
+          <div class="imovel-imagem">
+            <img src="Imagenshola/fachada.jpg" alt="Hola Sunset">
+            <div class="faixa-exclusivo">OPORTUNIDADE</div>
+          </div>
+
+          <div class="imovel-info">
+            <div class="imovel-topo">
+              <div>
+                <p class="tipo-imovel">LOFT</p>
+                <h3 class="bairro-imovel">MENINO DEUS</h3>
+                <p class="detalhes-imovel">17 a 45 m²</p>
+              </div>
+
+              <div class="preco-imovel">
+                <span>Rentabilidade a partir de <br> R$4.500 a.m<br></span>
+              </div>
+            </div>
+
+            <p class="descricao-imovel">
+              A melhor localização de Porto Alegre, próximo ao Estádio Beira Rio e outras grandes demandas da região!
+            </p>
+          </div>
+        </div>
+
+        <div class="imovel-card">
+          <div class="imovel-imagem">
+            <img src="Imagenscollage/lobby.jpg" alt="Collage Bela Vista">
+            <div class="faixa-exclusivo">OPORTUNIDADE</div>
+          </div>
+
+          <div class="imovel-info">
+            <div class="imovel-topo">
+              <div>
+                <p class="tipo-imovel">LOFT</p>
+                <h3 class="bairro-imovel">BELA VISTA</h3>
+                <p class="detalhes-imovel">26 a 38 m²</p>
+              </div>
+
+              <div class="preco-imovel">
+                <span>Rentabilidade a partir de <br>R$5.200 a.m<br></span>
+              </div>
+            </div>
+
+            <p class="descricao-imovel">
+              Empreendimento próximo a grandes demandas como a Av. Paulista e eixos hospitalares.
+            </p>
+          </div>
+        </div>
+
+        <div class="imovel-card">
+          <div class="imovel-imagem">
+            <img src="Imagens4D/fachadanoturna.jpg" alt="4D Complex House">
+            <div class="faixa-exclusivo">OPORTUNIDADE</div>
+          </div>
+
+          <div class="imovel-info">
+            <div class="imovel-topo">
+              <div>
+                <p class="tipo-imovel">LOFT</p>
+                <h3 class="bairro-imovel">QUARTO DISTRITO</h3>
+                <p class="detalhes-imovel">16 a 46,26 m²</p>
+              </div>
+
+              <div class="preco-imovel">
+                <span>Rentabilidade a partir de <br>R$4.425 a.m<br></span>
+              </div>
+            </div>
+
+            <p class="descricao-imovel">
+              Empreendimento moderno, com alto potencial de rentabilidade!
+            </p>
+          </div>
+        </div>
+
+        <div class="imovel-card">
+          <div class="imovel-imagem">
+            <img src="Caizimagens/fachadacompleta.jpg" alt="Caiz Downtown">
+            <div class="faixa-exclusivo">OPORTUNIDADE</div>
+          </div>
+
+          <div class="imovel-info">
+            <div class="imovel-topo">
+              <div>
+                <p class="tipo-imovel">LOFT</p>
+                <h3 class="bairro-imovel">CENTRO HISTÓRICO</h3>
+                <p class="detalhes-imovel">20 a 33 m²</p>
+              </div>
+
+              <div class="preco-imovel">
+                <span>Rentabilidade a partir de <br>R$5.880 a.m<br></span>
+              </div>
+            </div>
+
+            <p class="descricao-imovel">
+              Apartamento elegante, com excelente iluminação natural e localização
+              valorizada para morar ou investir.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button class="vitrine-seta direita" onclick="scrollVitrine(1)">&#10095;</button>
+
+      <div class="vitrine-indicador">
+        <div class="linha">
+          <div class="progresso" id="progressoLinha"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <a href="https://wa.me/5551989153245" 
+   class="whatsapp-float" 
+   target="_blank">
+
+    <svg viewBox="0 0 32 32" width="30" height="30">
+      <path fill="white" d="M16 .396C7.163.396 0 7.56 0 16.396c0 2.89.756 5.6 2.073 7.948L0 32l7.848-2.048A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837.396 16 .396zm0 29.244c-2.543 0-5.034-.68-7.217-1.97l-.516-.305-4.655 1.214 1.243-4.54-.335-.527A13.57 13.57 0 012.43 16.396C2.43 8.983 8.587 2.826 16 2.826s13.57 6.157 13.57 13.57-6.157 13.57-13.57 13.57zm7.548-10.144c-.413-.207-2.444-1.205-2.822-1.343-.378-.138-.653-.207-.928.207s-1.066 1.343-1.308 1.62c-.241.276-.482.31-.896.104-.413-.207-1.744-.643-3.322-2.05-1.228-1.095-2.058-2.447-2.3-2.86-.241-.413-.026-.636.181-.843.186-.185.413-.482.62-.723.207-.241.276-.413.413-.689.138-.276.069-.517-.035-.723-.104-.207-.928-2.24-1.272-3.068-.335-.804-.675-.694-.928-.707l-.79-.014c-.276 0-.723.104-1.102.517-.378.413-1.447 1.414-1.447 3.447s1.482 3.999 1.689 4.275c.207.276 2.917 4.454 7.07 6.247.988.426 1.757.68 2.357.87.99.315 1.89.27 2.6.164.793-.118 2.444-.998 2.788-1.962.344-.965.344-1.792.241-1.962-.104-.172-.378-.276-.79-.482z"/>
+    </svg>
+  </a>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">
+        <img src="/assets/simbololight.svg" alt="Nine Premium">
+      </div>
+
+      <h3>Redes Sociais</h3>
+
+      <div class="footer-social">
+
+        <a href="https://www.instagram.com/nineinvestimentos?igsh=MWpyMmVmZXcxamxhdg==" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5"
+                  stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <circle cx="12" cy="12" r="4"
+                    stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+          Instagram
+        </a>
+
+        <a href="https://wa.me/5551989153245" target="_blank">
+          <svg viewBox="0 0 24 24">
+              <path d="M21 12a9 9 0 1 1-3-6.7"
+                    stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <path d="M8.5 9c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.3l.7 1.7c.1.2.1.4 0 .6l-.3.5c-.1.2-.1.3 0 .5.2.3.8 1.2 1.7 1.7.2.1.3.1.5 0l.5-.3c.2-.1.4-.1.6 0l1.7.7c.3.1.3.3.3.5v.5c0 .3 0 .5-.5.7-.6.2-1.9.3-3.6-.8-2-1.3-3.2-3.1-3.6-3.6-.3-.5-1-2.2-.3-3.6z"
+                    stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
+          WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Ver todos os imóveis</h3>
+      <ul>
+        <li><a href="#">São Paulo</a></li>
+        <li><a href="#">Porto Alegre</a></li>
+        <li><a href="#">Rio de Janeiro</a></li>
+      </ul>
+
+      <h3 class="footer-title-space">Fale Conosco</h3>
+      <ul>
+        <li><a href="https://wa.me/5551989153245">(51) 98915-3245</a></li>
+        <li><a href="mailto:nine@nine.imb.br">nine@nine.imb.br</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3 class="footer-title-space">Institucional</h3>
+      <ul>
+        <li><a href="#">Construtoras</a></li>
+        <li><a href="#">Trabalhe conosco</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Sobre a Nine</h3>
+      <ul>
+        <li><a href="#">A empresa</a></li>
+        <li><a href="#">Mercado Imobiliário</a></li>
+        <li><a href="#">Investimentos</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Nine Premium Real Estate. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
