@@ -15,8 +15,8 @@
 
 /* HERO */
 .hero {
-  height: 80vh;
-  background: url('Imagensconsulado/fachada.jpg') no-repeat center/cover;
+  height: 90vh;
+  background: url('assets/Apresentação_Nine_Today_Chácara-Santo-Antônio-5.png') no-repeat center/cover;
   position: relative;
   color: var(--cor-primaria);
 }
@@ -37,7 +37,6 @@ html, body {
 
 .navbar {
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -61,6 +60,7 @@ html, body {
 .logo img {
   height: 50px !important;
   margin: 0 !important;
+  top: 15px;
 }
 
 .menu {
@@ -130,26 +130,29 @@ html, body {
 .content {
   position: absolute;
   bottom: 80px;
-  left: 40px;
+  left: 60px;
   z-index: 3;
   max-width: 600px;
 }
 
 .tags {
+  display: flex;
+  flex-direction: column; /* coloca uma embaixo da outra */
+  gap: 8px; /* espaço entre elas */
   margin-bottom: 15px;
 }
 
 .tag {
   display: inline-block;
-  border: 2px solid white;
+  width: fit-content; /* ESSENCIAL */
+  border: 2px solid var(--cor-primaria);
   border-radius: 3px;
   padding: 6px 12px;
-  margin-right: 8px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .content h1 {
-  font-size: 50px;
+  font-size: 45px;
   margin-bottom: 10px;
 }
 
@@ -160,27 +163,28 @@ html, body {
 
 /* BOTÃO */
 .video-btn {
-  position: absolute;
-  bottom: 80px;
-  right: 100px;
+  margin-top: 28px;
   z-index: 5;
 }
 
 .video-link {
-  border-radius: 40px;
+ border-radius: 40px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: var(--cor-primaria);
-  border: 1px solid var(--cor-primaria);
+  color: var(--cor-secundaria);
+  border: 1px solid var(--cor-contraste);
+  background: var(--cor-contraste);
   padding: 16px 28px;
-  font-size: 20px;
+  font-size: 30px;
   transition: 0.3s;
 }
 
 .video-link:hover {
   background: var(--cor-primaria);
   color: var(--cor-secundaria);
+  border-color: var(--cor-primaria);
 }
 
 /* SEÇÃO DESTINOS */
@@ -780,9 +784,10 @@ html, body {
 
   .video-btn {
     position: relative;
-    right: auto;
-    bottom: auto;
-    z-index: 3;
+  right: auto;
+  bottom: auto;
+  z-index: 3;
+  margin-top: 22px;
   }
 
   .video-link {
