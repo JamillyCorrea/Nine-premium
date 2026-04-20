@@ -185,8 +185,8 @@ html, body {
   color: var(--cor-secundaria);
   border: 1px solid var(--cor-contraste);
   background: var(--cor-contraste);
-  padding: 24px 28px;
-  font-size: 30px;
+  padding: 25px 25px;
+  font-size: 22px;
   transition: 0.3s;
 }
 
