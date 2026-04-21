@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif+Caption:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
  :root {
   --cor-primaria: white;
   --cor-secundaria: #111;
-  --cor-contraste: #FFC107;
+  --cor-contraste: #FF0000;
   --cor-cinza: #aaa;
   --cor-fundo: #f3f3f3;
   --fonte-principal: 'Open Sans', sans-serif;
@@ -161,7 +160,7 @@ html, body {
 }
 
 .content h1 {
-  font-size: 45px;
+  font-size: 35px;
   margin-bottom: 10px;
 }
 
@@ -182,7 +181,7 @@ html, body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--cor-secundaria);
+  color: var(--cor-primaria);
   border: 1px solid var(--cor-contraste);
   background: var(--cor-contraste);
   padding: 25px 25px;
@@ -213,7 +212,7 @@ html, body {
 
 .destinos-texto {
   width: 42%;
-  padding-top: 40px;
+  padding-top: 140px;
 }
 
 .destinos-texto h2 {
@@ -221,35 +220,29 @@ html, body {
   line-height: 1.2;
   font-weight: 400;
   color: var(--cor-secundaria);
+  font-family: var(--fonte-destaque);
   font-weight: 300;
   margin-bottom: 30px;
   max-width: 500px;
+  text-align: center;
 }
 
-.destinos-texto h3 {
-  font-size: 30px;
-  line-height: 1.2;
-  font-weight: 600;
-  color:var(--cor-secundaria);
-  font-family: var(--fonte-destaque);
-  margin-bottom: 30px;
-  max-width: 500px;
-  margin-left: 25px;
-  text-transform: uppercase;
-}
 
 .destinos-texto p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--cor-cinza);
   max-width: 430px;
   margin-bottom: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .btn-destinos {
   display: inline-block;
   background: var(--cor-contraste);
-  color: var(--cor-secundaria);
+  color: var(--cor-primaria);
   text-decoration: none;
   padding: 18px 34px;
   font-size: 14px;
@@ -324,8 +317,9 @@ html, body {
 
 .card-info span {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .card-info h3 {
@@ -336,7 +330,7 @@ html, body {
 
 .setas {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 30px;
   margin-top: 18px;
   padding-right: 8px;
@@ -361,6 +355,131 @@ html, body {
 .destinos-cards {
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+/* FORMULÁRIO CLEAN */
+.form-clean {
+  background: var(--cor-primaria);
+  padding: 0px 40px 30px;
+}
+
+.form-clean-container {
+  max-width: 1740px;
+  margin: 0 auto;
+  background: #f7f7f7;
+  border-radius: 18px;
+  padding: 42px 50px;
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  gap: 35px;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.form-clean-texto {
+  max-width: 430px;
+}
+
+.form-clean-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--cor-cinza);
+  margin-bottom: 14px;
+}
+
+.form-clean-texto h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  color: var(--cor-secundaria);
+  margin-bottom: 18px;
+  font-family: var(--fonte-destaque);
+  font-weight: 400;
+}
+
+.form-clean-texto p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--cor-cinza);
+}
+
+.form-clean-box {
+  width: 100%;
+}
+
+.form-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 68px;
+  padding: 0 22px;
+  border-radius: 14px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  font-size: 20px;
+  color: var(--cor-secundaria);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: #9a9a9a;
+}
+
+.form-group select {
+  color: var(--cor-secundaria);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23777' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M5.5 7.5l4.5 4.5 4.5-4.5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 18px;
+  padding-right: 50px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 3px rgba(17,17,17,0.06);
+}
+
+.form-button {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.form-button button {
+  height: 68px;
+  min-width: 220px;
+  border: none;
+  border-radius: 14px;
+  background: var(--cor-contraste);
+  color: var(--cor-primaria);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 34px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form-button button:hover {
+  background: #000;
+  transform: translateY(-2px);
 }
 
 .imoveis-vitrine {
@@ -453,7 +572,7 @@ html, body {
   background: var(--cor-secundaria);
   color: var(--cor-primaria);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   padding: 12px 36px;
   transform: rotate(-45deg);
   letter-spacing: 0.5px;
@@ -500,7 +619,7 @@ html, body {
 .preco-imovel {
   text-align: left;
   color: var(--cor-contraste);
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
@@ -736,6 +855,27 @@ html, body {
 
   .card-info h3 {
     font-size: 40px;
+  }
+
+  .form-clean-container {
+    grid-template-columns: 1fr;
+    padding: 36px 32px;
+  }
+
+  .form-clean-texto {
+    max-width: 100%;
+  }
+
+  .form-clean-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .form-button {
+    grid-column: 1 / -1;
+  }
+
+  .form-button button {
+    width: 100%;
   }
 
   .imovel-card {
@@ -1051,6 +1191,49 @@ html, body {
 
   .seta {
     font-size: 34px;
+  }
+
+  .form-clean {
+    padding: 50px 20px 10px;
+  }
+
+  .form-clean-container {
+    padding: 26px 20px;
+    border-radius: 16px;
+  }
+
+  .form-clean-texto h2 {
+    font-size: 28px;
+  }
+
+  .form-clean-texto p {
+    font-size: 16px;
+  }
+
+  .form-clean-grid {
+     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-button {
+    grid-column: auto;
+    justify-content: stretch;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-button button {
+    height: 58px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  .form-button button {
+    width: 100%;
+    min-width: unset;
+    height: 58px;
+    font-size: 16px;
+    border-radius: 12px;
   }
 
   .imoveis-vitrine {
